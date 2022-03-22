@@ -1,14 +1,18 @@
 package com.generation.task4e5
 
 import android.os.Bundle
+import android.service.controls.actions.FloatAction
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.generation.task4e5.adapter.Tarefaadapter
-import com.generation.task4e5.model.Tarefa
+import com.generation.task4e5.adapter.Postadapter
+import com.generation.task4e5.model.Post
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class ListFragment : Fragment() {
@@ -24,9 +28,9 @@ class ListFragment : Fragment() {
 
 
 
-        val listatarefa = mutableListOf(
+        val Listapost = mutableListOf(
 
-                Tarefa(
+                Post(
                     "ONG Alimento do bem",
                 "Alimentação",
                 "Link da imagem",
@@ -37,7 +41,7 @@ class ListFragment : Fragment() {
 
                 ),
 
-            Tarefa(
+            Post(
                 "ONG Moradores de rua e seus cães",
                 "Animais",
                 "Link da imagem",
@@ -48,7 +52,7 @@ class ListFragment : Fragment() {
 
             ),
 
-            Tarefa(
+            Post(
                 "ONG Brincando de aprender",
                 "Educação",
                 "Link da imagem",
@@ -60,8 +64,8 @@ class ListFragment : Fragment() {
             ),
 
 
-            Tarefa(
-                "ONG Fonça jovem universal ",
+            Post(
+                "ONG Força jovem universal ",
                 "Esportes",
                 "Link da imagem",
                 "Seminario especial",
@@ -74,17 +78,28 @@ class ListFragment : Fragment() {
         )
 
 
-        val recycletarefa = view.findViewById<RecyclerView>(R.id.recycletarefa)
+        val recyclepost = view.findViewById<RecyclerView>(R.id.recycletarefa)
 
-        val adapter =Tarefaadapter()
+        val adapter =Postadapter()
 
-        recycletarefa.layoutManager = LinearLayoutManager(context)
-        recycletarefa.adapter= adapter
+        recyclepost.layoutManager = LinearLayoutManager(context)
+        recyclepost.adapter= adapter
 
-        recycletarefa.setHasFixedSize(true)
+        recyclepost.setHasFixedSize(true)
 
-        adapter.setlista(listatarefa)
+        adapter.setlista(Listapost)
 
+
+
+        val botaoir = view.findViewById<FloatingActionButton>(R.id.floatingActionButton)
+
+        botaoir.setOnClickListener {
+
+            findNavController().navigate(
+                R.id.action_listFragment_to_segundoFragment)
+
+
+            }
 
         return view
     }

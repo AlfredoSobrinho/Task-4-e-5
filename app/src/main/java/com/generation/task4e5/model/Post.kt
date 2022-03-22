@@ -1,6 +1,6 @@
 package com.generation.task4e5.model
 
-data class Tarefa(
+data class Post(
 
 
     var autor: String,

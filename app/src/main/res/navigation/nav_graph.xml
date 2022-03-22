@@ -9,5 +9,18 @@
         android:id="@+id/listFragment"
         android:name="com.generation.task4e5.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_segundoFragment"
+            app:destination="@id/segundoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/segundoFragment"
+        android:name="com.generation.task4e5.SegundoFragment"
+        android:label="fragment_segundo"
+        tools:layout="@layout/fragment_segundo" >
+        <action
+            android:id="@+id/action_segundoFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
 </navigation>

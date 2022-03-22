@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/Task4e5/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Task4e5/app/src/main/res/layout/card_layout_tarefa.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Task4e5/app/src/main/res/layout/card_layout_tarefa.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Task4e5/app/src/main/res/layout/fragment_list.xml" value="0.209375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Task4e5/app/src/main/res/layout/fragment_segundo.xml" value="0.20153985507246377" />
       </map>
     </option>
   </component>
